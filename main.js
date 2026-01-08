@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
+
   const navbar = document.querySelector(".navbar");
   const navToggle = document.getElementById("navToggle");
   const navMenu = document.getElementById("navMenu");
@@ -55,13 +56,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function markActiveNav() {
     const scrollY = window.pageYOffset + 120;
-
     sections.forEach((section) => {
       const id = section.getAttribute("id");
       const top = section.offsetTop;
       const height = section.offsetHeight;
-
       const inView = scrollY >= top && scrollY < top + height;
+
       navLinks.forEach((link) => {
         if (link.getAttribute("href") === `#${id}`) {
           link.classList.toggle("active", inView);
@@ -99,7 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!id || id === "#") return;
         const target = document.querySelector(id);
         if (!target) return;
-
         e.preventDefault();
         const offset = target.offsetTop - 72;
         window.scrollTo({
@@ -147,7 +146,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* Reveal on scroll */
   const revealEls = document.querySelectorAll(".reveal");
-
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -182,6 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
         current = target;
         clearInterval(timer);
       }
+
       el.textContent =
         decimals === 0 ? Math.round(current) : current.toFixed(decimals);
     }, stepTime);
@@ -228,9 +227,12 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   );
 
-  /* Tilt hero card */
+  /* Tilt hero card – upgraded 3D */
   const tiltCard = document.querySelector(".tilt-card");
   if (tiltCard) {
+    const maxRotate = 12;
+    const maxZ = 40;
+
     tiltCard.addEventListener("mousemove", (e) => {
       const rect = tiltCard.getBoundingClientRect();
       const x = e.clientX - rect.left;
@@ -238,15 +240,27 @@ document.addEventListener("DOMContentLoaded", () => {
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
 
-      const rotateX = ((y - centerY) / centerY) * 8;
-      const rotateY = ((centerX - x) / centerX) * 8;
+      const rotateX = ((y - centerY) / centerY) * maxRotate * -1;
+      const rotateY = ((x - centerX) / centerX) * maxRotate;
 
-      tiltCard.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+      const depth = Math.sqrt(
+        Math.pow((x - centerX) / centerX, 2) +
+          Math.pow((y - centerY) / centerY, 2)
+      );
+      const translateZ = maxZ * (1 - Math.min(depth, 1));
+
+      tiltCard.style.transform =
+        `perspective(1200px) rotateX(${rotateX}deg) ` +
+        `rotateY(${rotateY}deg) translateZ(${translateZ}px)`;
+
+      tiltCard.style.boxShadow =
+        `${-rotateY * 1.5}px ${rotateX * 1.5}px 40px rgba(15, 23, 42, 0.9)`;
     });
 
     tiltCard.addEventListener("mouseleave", () => {
       tiltCard.style.transform =
-        "perspective(900px) rotateX(0deg) rotateY(0deg) translateY(0)";
+        "perspective(1200px) rotateX(0deg) rotateY(0deg) translateZ(0)";
+      tiltCard.style.boxShadow = "";
     });
   }
 
@@ -288,14 +302,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* Parallax for data network */
+  /* Parallax for data network – 3D feel */
   const networkLayer = document.querySelector(".data-network-layer");
   window.addEventListener("scroll", () => {
     if (!networkLayer) return;
     const scrollY = window.scrollY;
-    const offset = scrollY * 0.03;
-    const scale = 1 + scrollY * 0.00015;
-    networkLayer.style.transform = `translateY(${offset}px) scale(${scale})`;
+    const translateY = scrollY * 0.04;
+    const scale = 1 + scrollY * 0.00018;
+    const rotate = scrollY * 0.01;
+
+    networkLayer.style.transform =
+      `translateY(${translateY}px) scale(${scale}) ` +
+      `rotateX(15deg) rotateZ(${rotate}deg)`;
   });
 
   /* Electric sparks on touch/click */
@@ -305,7 +323,6 @@ document.addEventListener("DOMContentLoaded", () => {
     spark.style.left = `${x}px`;
     spark.style.top = `${y}px`;
     document.body.appendChild(spark);
-
     spark.addEventListener("animationend", () => {
       spark.remove();
     });
