@@ -1,821 +1,735 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Eshan Singh | Data Science & AI Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="UTF-8" />
+    <title>Eshan Singh • Data Science & AI Engineer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Fonts & Icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+    <meta
+      name="description"
+      content="Eshan Singh – Data Science & AI engineer specialising in end‑to‑end ML pipelines, predictive modelling, NLP and RAG systems."
+    />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="container nav-inner">
-      <a href="#hero" class="nav-brand">
-        <span class="brand-logo">ES</span>
-        <span class="brand-text">
-          <span class="brand-name">Eshan Singh</span>
-          <span class="brand-role">Data Science &amp; AI Engineer</span>
-        </span>
-      </a>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkTtP4dNfN9Cvi1XyYGWB61nZ3CFAm0xwQK0M3qzN5RrtSN7Cz35cC7mQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="#hero" class="nav-brand">
+          <div class="brand-logo">ES</div>
+          <div class="brand-text">
+            <span class="brand-name">Eshan Singh</span>
+            <span class="brand-role">Data Science & AI</span>
+          </div>
+        </a>
 
-      <nav>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="#hero" class="nav-link active">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-          <li>
-            <button class="nav-theme-toggle" id="themeToggle">
-              <i class="fa-solid fa-moon"></i>
-            </button>
-          </li>
-        </ul>
-      </nav>
-      <div id="scrollProgressBar"></div>
-    </div>
-  </header>
+        <nav>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#hero" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li>
+              <button id="themeToggle" class="nav-theme-toggle" type="button">
+                <i class="fa-solid fa-moon"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
 
-  <!-- Hero -->
-  <section id="hero" class="hero-section">
-    <div class="hero-bg">
-      <div class="hero-gradient"></div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-      <!-- Interactive data-science network -->
-      <div class="data-network-layer">
-        <div class="data-node node-1"></div>
-        <div class="data-node node-2"></div>
-        <div class="data-node node-3"></div>
-        <div class="data-node node-4"></div>
-        <div class="data-node node-5"></div>
-
-        <div class="data-link link-1"></div>
-        <div class="data-link link-2"></div>
-        <div class="data-link link-3"></div>
-        <div class="data-link link-4"></div>
+        <div id="scrollProgressBar"></div>
       </div>
+    </header>
 
-      <div class="hero-orbit hero-orbit-1"></div>
-      <div class="hero-orbit hero-orbit-2"></div>
-      <div class="hero-orbit hero-orbit-3"></div>
-    </div>
+    <!-- Hero -->
+    <main id="hero" class="hero-section section">
+      <div class="hero-bg">
+        <div class="hero-gradient"></div>
 
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <p class="hero-pill">
-          <span class="pill-dot"></span>
-          Open to internships &amp; projects
-        </p>
+        <div class="data-network-layer">
+          <div class="data-node node-1"></div>
+          <div class="data-node node-2"></div>
+          <div class="data-node node-3"></div>
+          <div class="data-node node-4"></div>
+          <div class="data-node node-5"></div>
 
-        <h1 class="hero-title">
-          Hi, I'm <span class="highlight">Eshan</span>.
-        </h1>
-        <h2 class="hero-subtitle">
-          <span id="typewriter"></span><span class="cursor"></span>
-        </h2>
-
-        <p class="hero-description">
-          Data Science and AI engineer specialising in end‑to‑end ML pipelines,
-          predictive modelling, and advanced NLP &amp; RAG systems that turn raw
-          data into decisions.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">
-            <i class="fa-solid fa-rocket"></i>
-            View Projects
-          </a>
-          <a href="#contact" class="btn btn-secondary">
-            <i class="fa-solid fa-envelope"></i>
-            Contact Me
-          </a>
-          <a
-            href="Singh Eshan RESUME.pdf"
-            class="btn btn-secondary"
-            download="Singh Eshan RESUME.pdf"
-          >
-            <i class="fa-solid fa-file-arrow-down"></i>
-            Download Resume
-          </a>
+          <div class="data-link link-1"></div>
+          <div class="data-link link-2"></div>
+          <div class="data-link link-3"></div>
+          <div class="data-link link-4"></div>
         </div>
 
-        <div class="hero-metrics">
-          <div class="metric">
-            <span class="metric-value" data-target="3.9">3.9</span>
-            <span class="metric-label">GPA M.S. UMD</span>
-            <div class="metric-stream">
-              <span class="stream-bar"></span>
-            </div>
-          </div>
-          <div class="metric">
-            <span class="metric-value" data-target="8.98">8.98</span>
-            <span class="metric-label">CGPA B.E., SPPU</span>
-            <div class="metric-stream">
-              <span class="stream-bar"></span>
-            </div>
-          </div>
-          <div class="metric">
-            <span class="metric-value" data-target="8">8</span>
-            <span class="metric-label">ML/AI Projects</span>
-            <div class="metric-stream">
-              <span class="stream-bar"></span>
-            </div>
-          </div>
-          <div class="metric">
-            <span class="metric-value" data-target="4">4</span>
-            <span class="metric-label">Industry Internships</span>
-            <div class="metric-stream">
-              <span class="stream-bar"></span>
-            </div>
-          </div>
-        </div>
+        <div class="hero-orbit hero-orbit-1"></div>
+        <div class="hero-orbit hero-orbit-2"></div>
+        <div class="hero-orbit hero-orbit-3"></div>
       </div>
 
-      <div class="hero-visual">
-        <div class="hero-card tilt-card">
-          <div class="hero-avatar">
-            <span class="avatar-ring"></span>
-            <img src="eshan.jpg" alt="Eshan Singh" class="hero-photo" />
+      <div class="container hero-grid">
+        <section class="hero-text reveal">
+          <div class="hero-pill">
+            <span class="pill-dot"></span>
+            <span>Open to internships &amp; projects</span>
           </div>
-          <div class="hero-card-body">
-            <p class="hero-name">Eshan Singh</p>
-            <p class="hero-role">Data Science &amp; AI Engineer</p>
-            <div class="hero-tags">
-              <span>Python</span>
-              <span>ML/DL</span>
-              <span>NLP</span>
-              <span>RAG</span>
-            </div>
-          </div>
-          <div class="hero-card-footer">
-            <span>
-              <i class="fa-solid fa-location-dot"></i>
-              College Park, MD
-            </span>
-            <span class="status-dot"></span>
-            <span>Actively building</span>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <a href="#about" class="scroll-down">
-      <span>Scroll</span>
-      <i class="fa-solid fa-chevron-down"></i>
-    </a>
-  </section>
+          <h1 class="hero-title">
+            Data Science &amp; <span class="highlight">AI Engineer</span>
+          </h1>
 
-  <!-- About -->
-  <section id="about" class="section section-alt">
-    <div class="container">
-      <header class="section-header">
-        <p class="section-kicker">About</p>
-        <h2 class="section-title">Who am I?</h2>
-        <p class="section-subtitle">
-          Data‑driven engineer with a strong academic foundation and hands‑on
-          experience delivering ML solutions in finance, healthcare, and
-          analytics.
-        </p>
-      </header>
+          <p class="hero-subtitle">
+            <span id="typewriter"></span>
+            <span class="cursor">&nbsp;</span>
+          </p>
 
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <h3 class="content-title">Short Story</h3>
-          <p>
+          <p class="hero-description">
             I am a Data Science and AI engineer proficient in Python, SQL,
             Pandas, NumPy, and modern ML/DL frameworks. Skilled in designing
             end‑to‑end ML pipelines, from data ingestion and feature engineering
             through model evaluation, deployment, and monitoring.
           </p>
-          <p>
-            Experience spans predictive modelling, CNN digit classifiers, churn
-            and disease prediction, credit risk, and intelligent systems like
-            chatbots and recommender engines with NLP, RAG, and vector
-            embeddings.
-          </p>
 
-          <div class="about-highlights">
-            <div class="highlight-item">
-              <i class="fa-solid fa-trophy"></i>
-              <div>
-                <p class="highlight-label">2nd Place</p>
-                <p class="highlight-text">
-                  Gemini Hackathon UMD for Care Compass, a healthtech platform
-                  built with React, Node.js &amp; FHIR.
-                </p>
-              </div>
-            </div>
-
-            <div class="highlight-item">
-              <i class="fa-solid fa-certificate"></i>
-              <div>
-                <p class="highlight-label">Multiple Certifications</p>
-                <p class="highlight-text">
-                  Google, Microsoft, LinkedIn &amp; IBM credentials in
-                  analytics, AI, and ML.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline reveal">
-          <h3 class="content-title">Education</h3>
-
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h4>Master of Science, Data Science</h4>
-                <span class="timeline-date">Aug 2025 – May 2027</span>
-              </div>
-              <p class="timeline-place">
-                University of Maryland, College Park, USA
-              </p>
-              <p class="timeline-note">GPA 3.9 / 4.0</p>
-            </div>
-          </div>
-
-          <div class="timeline-item last-child">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h4>B.E., AI &amp; Data Science</h4>
-                <span class="timeline-date">Nov 2021 – Jun 2025</span>
-              </div>
-              <p class="timeline-place">
-                Dr D Y Patil Institute of Engineering, Management &amp; Research,
-                SPPU, Pune, India
-              </p>
-              <p class="timeline-note">
-                CGPA 8.98 / 10 – Distinction &amp; Honours in AIML.
-              </p>
-            </div>
-          </div>
-
-          <div class="cert-strip">
-            <span>
-              <i class="fa-brands fa-google"></i>
-              Google Data Analytics Professional Certification
-            </span>
-            <span>
-              <i class="fa-brands fa-google"></i>
-              Google Analytics Certificate
-            </span>
-            <span>
-              <i class="fa-brands fa-google"></i>
-              Google AI Essentials Professional Certification
-            </span>
-            <span>
-              <i class="fa-brands fa-microsoft"></i>
-              Career Essentials in Data Analysis (Microsoft &amp; LinkedIn)
-            </span>
-            <span>
-              <i class="fa-brands fa-microsoft"></i>
-              Microsoft Azure Machine Learning
-            </span>
-            <span>
-              <i class="fa-brands fa-python"></i>
-              Python for Data Science (IBM)
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience" class="section">
-    <div class="container">
-      <header class="section-header">
-        <p class="section-kicker">Experience</p>
-        <h2 class="section-title">Industry Internships</h2>
-        <p class="section-subtitle">
-          Applying theory in production‑oriented environments across fintech,
-          healthcare, and analytics.
-        </p>
-      </header>
-
-      <div class="exp-grid">
-        <article class="exp-card reveal">
-          <header class="exp-header">
-            <div>
-              <h3>Data Science / AIML Engineer Intern</h3>
-              <p class="exp-company">YBI Foundation &mdash; Delhi, India</p>
-            </div>
-            <span class="exp-time">Oct 2024 – Jan 2025</span>
-          </header>
-          <ul class="exp-list">
-            <li>
-              Built MNIST digit classification with KNN, SVM, and CNN using
-              TensorFlow, Keras, and Scikit‑learn, achieving 87–92% accuracy.
-            </li>
-            <li>
-              Developed bank customer churn models with feature engineering, EDA,
-              and visualisation for stakeholder insights.
-            </li>
-          </ul>
-          <div class="exp-tags">
-            <span>TensorFlow</span><span>Keras</span><span>Scikit‑learn</span
-            ><span>EDA</span>
-          </div>
-        </article>
-
-        <article class="exp-card reveal">
-          <header class="exp-header">
-            <div>
-              <h3>AIML Engineer Intern</h3>
-              <p class="exp-company">Nexus Info &mdash; Coimbatore, India</p>
-            </div>
-            <span class="exp-time">Dec 2023 – Mar 2024</span>
-          </header>
-          <ul class="exp-list">
-            <li>
-              Built NLP‑powered realtime chatbot for college admissions using
-              NLTK and Flask.
-            </li>
-            <li>
-              Engineered multiclass disease prediction system for GI and skin
-              disorders using Random Forest and XGBoost.
-            </li>
-          </ul>
-          <div class="exp-tags">
-            <span>NLP</span><span>Flask</span><span>Random Forest</span
-            ><span>XGBoost</span>
-          </div>
-        </article>
-
-        <article class="exp-card reveal">
-          <header class="exp-header">
-            <div>
-              <h3>Data Science Intern</h3>
-              <p class="exp-company">Codsoft &mdash; Remote, India</p>
-            </div>
-            <span class="exp-time">Aug 2023 – Sep 2023</span>
-          </header>
-          <ul class="exp-list">
-            <li>
-              Built ML models for Titanic survival, sales forecasting, and credit
-              card fraud detection.
-            </li>
-            <li>
-              Addressed class imbalance and evaluated models using precision,
-              recall, and F1‑score.
-            </li>
-          </ul>
-          <div class="exp-tags">
-            <span>Python</span><span>Classification</span><span>Regression</span
-            ><span>Model Evaluation</span>
-          </div>
-        </article>
-
-        <article class="exp-card reveal">
-          <header class="exp-header">
-            <div>
-              <h3>Jr Software Developer</h3>
-              <p class="exp-company">
-                Oytie IT and Training Institute &mdash; Pune, India
-              </p>
-            </div>
-            <span class="exp-time">Dec 2023 – Jan 2024</span>
-          </header>
-          <ul class="exp-list">
-            <li>
-              Constructed an assignment management system using HTML, CSS,
-              JavaScript, and Django to streamline backend operations.
-            </li>
-          </ul>
-          <div class="exp-tags">
-            <span>HTML</span><span>CSS</span><span>JavaScript</span
-            ><span>Django</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="section section-alt">
-    <div class="container">
-      <header class="section-header">
-        <p class="section-kicker">Projects</p>
-        <h2 class="section-title">Selected Work</h2>
-        <p class="section-subtitle">
-          A mix of hackathon wins, academic research, and production‑style
-          prototypes.
-        </p>
-      </header>
-
-      <div class="project-tabs">
-        <button class="project-tab active" data-filter="all">All</button>
-        <button class="project-tab" data-filter="ml">ML &amp; AI</button>
-        <button class="project-tab" data-filter="nlp">NLP &amp; RAG</button>
-        <button class="project-tab" data-filter="fullstack">Full‑Stack</button>
-      </div>
-
-      <div class="projects-grid">
-        <article class="project-card reveal" data-category="fullstack ml">
-          <div class="project-badge">Gemini Hackathon 2nd Place</div>
-          <h3 class="project-title">Care Compass</h3>
-          <p class="project-meta">HealthTech · React · Node.js · FHIR</p>
-          <p class="project-description">
-            Full‑stack care coordination platform for realtime patient risk
-            assessment using FHIR standards, REST APIs, and MongoDB for
-            high‑volume data.
-          </p>
-          <ul class="project-points">
-            <li>
-              FHIR‑compliant data model with scalable RESTful backend.
-            </li>
-            <li>
-              Google Maps API for provider‑patient proximity visualisation.
-            </li>
-          </ul>
-          <div class="project-tags">
-            <span>React</span><span>Node.js</span><span>MongoDB</span
-            ><span>FHIR</span>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="ml">
-          <h3 class="project-title">Loan Default Risk Prediction</h3>
-          <p class="project-meta">Explainable AI · Gradient Boosting · LIME</p>
-          <p class="project-description">
-            Binary classifier estimating loan default probability using
-            financial &amp; behavioural features with model interpretability via
-            LIME.
-          </p>
-          <ul class="project-points">
-            <li>Feature engineering for credit risk signals.</li>
-            <li>Local explanations for individual credit decisions.</li>
-          </ul>
-          <div class="project-tags">
-            <span>Python</span><span>Gradient Boosting</span><span>LIME</span>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="nlp ml">
-          <h3 class="project-title">Career Counselling Using AI</h3>
-          <p class="project-meta">Android · NLP · RAG · Google Cloud</p>
-          <p class="project-description">
-            Voice‑enabled Android assistant with GPT, RAG, and Google Cloud
-            Speech &amp; TTS for personalised career recommendations, published
-            in WRFER.
-          </p>
-          <ul class="project-points">
-            <li>
-              Speech‑to‑text and TTS integration with conversational flows.
-            </li>
-            <li>
-              Hybrid ML stack combining decision trees, SVM, Random Forests, and
-              clustering.
-            </li>
-          </ul>
-          <div class="project-tags">
-            <span>Android</span><span>NLP</span><span>RAG</span><span>GPT</span>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="ml">
-          <h3 class="project-title">Disease Prediction System</h3>
-          <p class="project-meta">Healthcare · Random Forest · XGBoost</p>
-          <p class="project-description">
-            Multiclass prediction for gastrointestinal and skin disorders with
-            advanced feature engineering and ensemble models.
-          </p>
-          <ul class="project-points">
-            <li>End‑to‑end pipeline from raw clinical data to predictions.</li>
-            <li>Optimised Random Forest and XGBoost ensembles.</li>
-          </ul>
-          <div class="project-tags">
-            <span>Python</span><span>Random Forest</span><span>XGBoost</span>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="ml">
-          <h3 class="project-title">Handwritten Digit Classification</h3>
-          <p class="project-meta">Computer Vision · CNN · SVM · KNN</p>
-          <p class="project-description">
-            MNIST classifiers with KNN, SVM, and CNN, implemented in
-            TensorFlow/Keras &amp; Scikit‑learn, reaching 87–92% accuracy.
-          </p>
-          <ul class="project-points">
-            <li>
-              Side‑by‑side benchmarking of classical vs deep models.
-            </li>
-          </ul>
-          <div class="project-tags">
-            <span>TensorFlow</span><span>Keras</span><span>Scikit‑learn</span>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="ml">
-          <h3 class="project-title">Applied ML Mini‑Suite</h3>
-          <p class="project-meta">Churn · Fraud · Forecasting · Titanic</p>
-          <p class="project-description">
-            Collection of production‑style models: churn prediction, sales
-            forecasting, credit card fraud detection, and Titanic survival
-            analysis.
-          </p>
-          <ul class="project-points">
-            <li>
-              Feature engineering, imbalance handling, and metric‑driven
-              evaluation.
-            </li>
-            <li>
-              Focus on precision, recall, and F1‑score for high‑risk use‑cases.
-            </li>
-          </ul>
-          <div class="project-tags">
-            <span>EDA</span><span>Classification</span><span>Regression</span>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="ml">
-          <h3 class="project-title">Bankruptcy Prediction for Companies</h3>
-          <p class="project-meta">Risk Analytics · Supervised Learning</p>
-          <p class="project-description">
-            Designed a model to predict potential corporate bankruptcies using
-            financial ratios, debt levels, and market indicators.
-          </p>
-          <ul class="project-points">
-            <li>
-              Enabled early intervention and smarter investment decisions for
-              stakeholders.
-            </li>
-          </ul>
-          <div class="project-tags">
-            <span>Python</span><span>Classification</span
-            ><span>Financial Modelling</span>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="nlp ml">
-          <h3 class="project-title">Persona Chat‑bot</h3>
-          <p class="project-meta">AI Career Guidance · NLP · DL</p>
-          <p class="project-description">
-            Architected an AI system using classification models and clustering
-            algorithms to recommend optimal career paths.
-          </p>
-          <ul class="project-points">
-            <li>
-              Combined persona‑aware dialogue with data‑driven career
-              recommendations.
-            </li>
-            <li>
-              Technologies: Python, TensorFlow, Firebase, Android Studio, and
-              Google Cloud Text‑to‑Speech API.
-            </li>
-          </ul>
-          <div class="project-tags">
-            <span>Python</span><span>TensorFlow</span><span>Firebase</span
-            ><span>Android Studio</span><span>Google Cloud TTS</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="section section-alt">
-    <div class="container">
-      <header class="section-header">
-        <p class="section-kicker">Skills</p>
-        <h2 class="section-title">What I work with</h2>
-        <p class="section-subtitle">
-          From data wrangling to deployment, covering ML, analytics, and modern
-          AI tooling.
-        </p>
-      </header>
-
-      <div class="skills-grid">
-        <div class="skill-column reveal">
-          <h3 class="content-title">
-            <i class="fa-solid fa-code"></i>Programming &amp; Scripting
-          </h3>
-          <ul class="chip-list">
-            <li>Python &mdash; NumPy, Pandas, Scikit‑learn, Keras, TF</li>
-            <li>SQL</li>
-            <li>Java</li>
-            <li>JavaScript</li>
-            <li>Excel &mdash; Pivot, Power Query, DAX</li>
-          </ul>
-        </div>
-
-        <div class="skill-column reveal">
-          <h3 class="content-title">
-            <i class="fa-solid fa-chart-line"></i>Analytics &amp; Visualisation
-          </h3>
-          <ul class="chip-list">
-            <li>Data Cleaning &amp; EDA</li>
-            <li>Feature Engineering</li>
-            <li>Statistics &amp; A/B Testing</li>
-            <li>Tableau</li>
-            <li>Power BI</li>
-          </ul>
-        </div>
-
-        <div class="skill-column reveal">
-          <h3 class="content-title">
-            <i class="fa-solid fa-brain"></i>Machine Learning &amp; AI
-          </h3>
-          <ul class="chip-list">
-            <li>Supervised &amp; Unsupervised Learning</li>
-            <li>Classification, Regression, Clustering</li>
-            <li>Deep Learning (CNN)</li>
-            <li>NLP, RAG, Generative AI</li>
-          </ul>
-        </div>
-
-        <div class="skill-column reveal">
-          <h3 class="content-title">
-            <i class="fa-solid fa-gears"></i>Tools &amp; Workflow
-          </h3>
-          <ul class="chip-list">
-            <li>Git/GitHub</li>
-            <li>Jupyter</li>
-            <li>Android Studio</li>
-            <li>Firebase</li>
-            <li>Google Cloud</li>
-            <li>ETL &amp; CRM Tools</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="container">
-      <header class="section-header">
-        <p class="section-kicker">Contact</p>
-        <h2 class="section-title">Let’s build something</h2>
-        <p class="section-subtitle">
-          Whether it’s a research collaboration, product prototype, or
-          data‑driven feature, feel free to reach out.
-        </p>
-      </header>
-
-      <div class="contact-grid">
-        <div class="contact-info reveal">
-          <div class="contact-card">
-            <div class="contact-icon">
-              <i class="fa-solid fa-location-dot"></i>
-            </div>
-            <div>
-              <h3>Location</h3>
-              <p>
-                College Park 20740<br />
-                Maryland, USA
-              </p>
-            </div>
-          </div>
-
-          <div class="contact-card">
-            <div class="contact-icon">
-              <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div>
-              <h3>Email</h3>
-              <p>
-                <a href="mailto:esingh16@umd.edu">esingh16@umd.edu</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="contact-card">
-            <div class="contact-icon">
-              <i class="fa-solid fa-phone"></i>
-            </div>
-            <div>
-              <h3>Phone</h3>
-              <p>
-                <a href="tel:+12272591592">+1 227 2591592</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="contact-links">
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-diagram-project"></i>
+              View projects
+            </a>
             <a
-              href="https://www.linkedin.com/in/eshan-singh-708752242"
+              href="Singh-Eshan-RESUME.pdf"
+              class="btn btn-secondary"
               target="_blank"
-              rel="noopener noreferrer"
-              class="social-link"
-              aria-label="LinkedIn"
+              rel="noreferrer"
             >
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a
-              href="https://github.com/esingh16"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-link"
-              aria-label="GitHub"
-            >
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a
-              href="mailto:esingh16@umd.edu"
-              class="social-link"
-              aria-label="Email"
-            >
-              <i class="fa-solid fa-envelope"></i>
+              <i class="fa-solid fa-file-lines"></i>
+              Download résumé
             </a>
           </div>
+
+          <div class="hero-metrics">
+            <div class="metric">
+              <span class="metric-value" data-target="3.9">0</span>
+              <span class="metric-label">GPA – M.S. Data Science (UMD)</span>
+              <div class="metric-stream">
+                <div class="stream-bar"></div>
+              </div>
+            </div>
+            <div class="metric">
+              <span class="metric-value" data-target="15">0</span>
+              <span class="metric-label">End‑to‑end ML projects</span>
+              <div class="metric-stream">
+                <div class="stream-bar"></div>
+              </div>
+            </div>
+            <div class="metric">
+              <span class="metric-value" data-target="10">0</span>
+              <span class="metric-label">Certifications in AI / ML</span>
+              <div class="metric-stream">
+                <div class="stream-bar"></div>
+              </div>
+            </div>
+            <div class="metric">
+              <span class="metric-value" data-target="2">0</span>
+              <span class="metric-label">Published / hackathon wins</span>
+              <div class="metric-stream">
+                <div class="stream-bar"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="hero-visual reveal">
+          <div class="tilt-wrapper">
+            <article class="hero-card tilt-card">
+              <div class="hero-avatar">
+                <span class="avatar-ring"></span>
+                <img src="eshan.jpg" alt="Portrait of Eshan Singh" class="hero-photo" />
+              </div>
+
+              <div class="hero-card-body">
+                <h2 class="hero-name">Eshan Singh</h2>
+                <p class="hero-role">Data Science &amp; AI Engineer</p>
+
+                <div class="hero-tags">
+                  <span>Predictive modelling</span>
+                  <span>Deep learning</span>
+                  <span>NLP &amp; RAG</span>
+                  <span>Data analytics</span>
+                </div>
+
+                <div class="hero-card-footer">
+                  <div class="hero-status">
+                    <span class="status-dot"></span>
+                    <span>Designing production‑grade ML pipelines</span>
+                  </div>
+                  <span class="hero-location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    College Park &bull; Remote‑friendly
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </aside>
+      </div>
+
+      <a href="#about" class="scroll-down">
+        <span>Scroll to explore</span>
+        <i class="fa-solid fa-angles-down"></i>
+      </a>
+    </main>
+
+    <!-- About -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-kicker">Profile</p>
+          <h2 class="section-title">From data to decisions</h2>
+          <p class="section-subtitle">
+            Data Science and AI engineer specialising in end‑to‑end ML
+            pipelines, predictive modelling, and advanced NLP &amp; RAG systems
+            that turn raw data into decisions.
+          </p>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-left reveal">
+            <h3 class="content-title">What drives the work</h3>
+            <p>
+              Experience spans predictive modelling, CNN digit classifiers,
+              churn and disease prediction, credit risk, and intelligent systems
+              like chatbots and recommender engines with NLP, RAG, and vector
+              embeddings.
+            </p>
+            <p>
+              Comfortable moving from exploratory analysis to deployment,
+              stitching together cloud services, APIs, databases, and monitoring
+              to keep models reliable in production.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <i class="fa-solid fa-medal"></i>
+                <div>
+                  <p class="highlight-label">2nd place – Gemini Hackathon</p>
+                  <p class="highlight-text">
+                    Care Compass, a healthtech platform built with React,
+                    Node.js, and FHIR for real‑time patient risk assessment.
+                  </p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-certificate"></i>
+                <div>
+                  <p class="highlight-label">
+                    Multiple analytics &amp; AI certifications
+                  </p>
+                  <p class="highlight-text">
+                    Google, Microsoft, LinkedIn, and IBM credentials in data
+                    analytics, machine learning, and cloud AI.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="about-right reveal">
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h4>M.S. Data Science</h4>
+                    <span class="timeline-date">2024 – 2026</span>
+                  </div>
+                  <p class="timeline-place">
+                    University of Maryland, College Park, USA
+                  </p>
+                  <p class="timeline-note">GPA 3.9 / 4.0</p>
+                </div>
+              </div>
+
+              <div class="timeline-item last-child">
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h4>B.Tech AIML</h4>
+                    <span class="timeline-date">2020 – 2024</span>
+                  </div>
+                  <p class="timeline-place">
+                    Dr D Y Patil Institute of Engineering, Management &amp;
+                    Research, SPPU, Pune, India
+                  </p>
+                  <p class="timeline-note">
+                    CGPA 8.98 / 10 – Distinction &amp; Honours in AIML
+                  </p>
+                </div>
+              </div>
+
+              <div class="cert-strip">
+                <span>
+                  <i class="fa-brands fa-google"></i>
+                  Google analytics / AI
+                </span>
+                <span>
+                  <i class="fa-brands fa-microsoft"></i>
+                  Microsoft Azure ML
+                </span>
+                <span>
+                  <i class="fa-brands fa-linkedin"></i>
+                  LinkedIn Data Science
+                </span>
+                <span>
+                  <i class="fa-brands fa-aws"></i>
+                  IBM / cloud ML
+                </span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-kicker">Experience</p>
+          <h2 class="section-title">Applied machine learning work</h2>
+          <p class="section-subtitle">
+            From academic research to hackathons and production‑style solutions,
+            every project is built to be explainable, reliable, and ready to
+            plug into real products.
+          </p>
+        </header>
+
+        <div class="exp-grid">
+          <article class="exp-card reveal">
+            <div class="exp-header">
+              <div>
+                <h3>Care Compass – Healthtech platform</h3>
+                <p class="exp-company">Gemini Hackathon • UMD</p>
+              </div>
+              <span class="exp-time">2nd place</span>
+            </div>
+            <ul class="exp-list">
+              <li>
+                Built a full‑stack care coordination platform for real‑time
+                patient risk assessment using FHIR and REST APIs.
+              </li>
+              <li>
+                Designed scoring pipelines to surface high‑risk cohorts to care
+                teams with interpretable metrics.
+              </li>
+            </ul>
+            <div class="exp-tags">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+              <span>FHIR</span>
+              <span>ML scoring</span>
+            </div>
+          </article>
+
+          <article class="exp-card reveal">
+            <div class="exp-header">
+              <div>
+                <h3>Loan default risk engine</h3>
+                <p class="exp-company">Academic &amp; industry projects</p>
+              </div>
+              <span class="exp-time">Binary classifier</span>
+            </div>
+            <ul class="exp-list">
+              <li>
+                Built models estimating loan default probability using financial
+                and behavioural features.
+              </li>
+              <li>
+                Added LIME‑based interpretability for risk officers to inspect
+                feature contributions.
+              </li>
+            </ul>
+            <div class="exp-tags">
+              <span>Logistic regression</span>
+              <span>XGBoost</span>
+              <span>LIME</span>
+              <span>Credit risk</span>
+            </div>
+          </article>
+
+          <article class="exp-card reveal">
+            <div class="exp-header">
+              <div>
+                <h3>Career guidance AI assistant</h3>
+                <p class="exp-company">WRFER publication</p>
+              </div>
+              <span class="exp-time">Voice‑enabled app</span>
+            </div>
+            <ul class="exp-list">
+              <li>
+                Architected a voice‑enabled Android assistant with GPT, RAG, and
+                Google Cloud Speech / TTS.
+              </li>
+              <li>
+                Delivered personalised career recommendations from curated
+                knowledge bases and embeddings.
+              </li>
+            </ul>
+            <div class="exp-tags">
+              <span>Android</span>
+              <span>RAG</span>
+              <span>Vector DB</span>
+              <span>Speech APIs</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Projects -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-kicker">Projects</p>
+          <h2 class="section-title">Machine learning in action</h2>
+          <p class="section-subtitle">
+            A selection of work spanning classification, forecasting, fraud
+            detection, and intelligent assistants – each with reproducible
+            notebooks and clean code.
+          </p>
+        </header>
+
+        <div class="project-tabs reveal">
+          <button class="project-tab active" data-filter="all">All</button>
+          <button class="project-tab" data-filter="vision">Vision</button>
+          <button class="project-tab" data-filter="tabular">Tabular</button>
+          <button class="project-tab" data-filter="nlp">NLP / RAG</button>
         </div>
 
-        <div class="contact-form-wrapper reveal">
-          <form
-            id="contactForm"
-            class="contact-form"
-            autocomplete="off"
-            action="https://formspree.io/f/xzdzgkwj"
-            method="POST"
+        <div class="projects-grid">
+          <article
+            class="project-card reveal"
+            data-category="vision tabular"
           >
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Your name"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="emailInput">Email</label>
-                <input
-                  id="emailInput"
-                  name="replyto"
-                  type="email"
-                  placeholder="you@example.com"
-                  required
-                />
-              </div>
+            <span class="project-badge">Deep learning</span>
+            <h3 class="project-title">MNIST digit classifiers</h3>
+            <p class="project-meta">
+              KNN, SVM, and CNN using TensorFlow, Keras, and Scikit‑learn.
+            </p>
+            <p class="project-description">
+              Implemented multiple architectures on MNIST to compare
+              performance, optimisation strategies, and generalisation, reaching
+              87–92% accuracy.
+            </p>
+            <ul class="project-points">
+              <li>Explored KNN, SVM, and CNN approaches side‑by‑side.</li>
+              <li>Analysed misclassifications and confusion matrices.</li>
+            </ul>
+            <div class="project-tags">
+              <span>TensorFlow</span>
+              <span>Keras</span>
+              <span>Scikit‑learn</span>
+              <span>Python</span>
             </div>
+          </article>
 
-            <div class="form-row">
+          <article class="project-card reveal" data-category="tabular nlp">
+            <span class="project-badge">Customer analytics</span>
+            <h3 class="project-title">Bank churn prediction</h3>
+            <p class="project-meta">
+              Feature engineering and churn modelling for actionable insights.
+            </p>
+            <p class="project-description">
+              Developed bank customer churn models with EDA, visualisation, and
+              interpretable metrics to help stakeholders understand drivers of
+              attrition.
+            </p>
+            <ul class="project-points">
+              <li>Engineered behavioural and demographic features.</li>
+              <li>Designed dashboards to communicate results.</li>
+            </ul>
+            <div class="project-tags">
+              <span>Classification</span>
+              <span>EDA</span>
+              <span>SHAP</span>
+              <span>Plotly</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="tabular">
+            <span class="project-badge">Risk modelling</span>
+            <h3 class="project-title">Corporate bankruptcy prediction</h3>
+            <p class="project-meta">
+              Financial ratios, market indicators, and survival risk.
+            </p>
+            <p class="project-description">
+              Designed models to predict potential bankruptcies using financial
+              ratios, debt levels, and market indicators for proactive risk
+              assessment.
+            </p>
+            <ul class="project-points">
+              <li>Compared tree‑based and linear baselines.</li>
+              <li>Used feature selection to simplify deployment.</li>
+            </ul>
+            <div class="project-tags">
+              <span>Gradient boosting</span>
+              <span>Risk analytics</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="nlp">
+            <span class="project-badge">RAG system</span>
+            <h3 class="project-title">Career path recommender</h3>
+            <p class="project-meta">
+              GPT‑powered assistant with retrieval‑augmented generation.
+            </p>
+            <p class="project-description">
+              Architected an AI system using classification models and
+              clustering to recommend optimal career paths with retrieval
+              grounding from curated content.
+            </p>
+            <ul class="project-points">
+              <li>Vector embeddings for semantic search.</li>
+              <li>RAG pipelines for reliable QA.</li>
+            </ul>
+            <div class="project-tags">
+              <span>RAG</span>
+              <span>Embeddings</span>
+              <span>LLMs</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="tabular">
+            <span class="project-badge">Healthcare</span>
+            <h3 class="project-title">Disease prediction models</h3>
+            <p class="project-meta">
+              Gastrointestinal and skin disorders with ensembles.
+            </p>
+            <p class="project-description">
+              Built multiclass prediction pipelines with advanced feature
+              engineering and ensemble models to detect multiple disease
+              categories.
+            </p>
+            <ul class="project-points">
+              <li>Addressed class imbalance with resampling.</li>
+              <li>Evaluated macro‑averaged metrics.</li>
+            </ul>
+            <div class="project-tags">
+              <span>Ensembles</span>
+              <span>Healthcare</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="tabular">
+            <span class="project-badge">Production‑style</span>
+            <h3 class="project-title">ML model collection</h3>
+            <p class="project-meta">
+              Churn, fraud, forecasting, and survival analysis.
+            </p>
+            <p class="project-description">
+              Collection of production‑style models: churn prediction, sales
+              forecasting, credit card fraud detection, and Titanic survival
+              analysis.
+            </p>
+            <ul class="project-points">
+              <li>Unified pipeline structure for different problems.</li>
+              <li>Config‑driven experiments and reporting.</li>
+            </ul>
+            <div class="project-tags">
+              <span>Pipeline design</span>
+              <span>Experiment tracking</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-kicker">Skills</p>
+          <h2 class="section-title">Full‑stack data toolkit</h2>
+          <p class="section-subtitle">
+            Comfortable across the ML lifecycle – from data pipelines to model
+            design, evaluation, deployment, and monitoring.
+          </p>
+        </header>
+
+        <div class="skills-grid">
+          <article class="skill-column reveal">
+            <h3><i class="fa-solid fa-database"></i>Data &amp; querying</h3>
+            <ul class="chip-list">
+              <li>Python, SQL</li>
+              <li>Pandas, NumPy</li>
+              <li>Data cleaning &amp; feature engineering</li>
+              <li>EDA &amp; visualisation</li>
+            </ul>
+          </article>
+
+          <article class="skill-column reveal">
+            <h3><i class="fa-solid fa-brain"></i>Machine learning</h3>
+            <ul class="chip-list">
+              <li>Scikit‑learn, XGBoost, LightGBM</li>
+              <li>Classification &amp; regression</li>
+              <li>Ensembles &amp; model selection</li>
+              <li>Time‑series &amp; forecasting</li>
+            </ul>
+          </article>
+
+          <article class="skill-column reveal">
+            <h3><i class="fa-solid fa-robot"></i>Deep learning &amp; NLP</h3>
+            <ul class="chip-list">
+              <li>TensorFlow, Keras, PyTorch (working)</li>
+              <li>CNNs for vision</li>
+              <li>NLP, transformers, RAG</li>
+              <li>Embeddings &amp; vector search</li>
+            </ul>
+          </article>
+
+          <article class="skill-column reveal">
+            <h3><i class="fa-solid fa-cloud-arrow-up"></i>Deployment</h3>
+            <ul class="chip-list">
+              <li>REST APIs (FastAPI / Flask)</li>
+              <li>Docker &amp; cloud deployment</li>
+              <li>Streamlit / dashboards</li>
+              <li>Monitoring &amp; logging</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-kicker">Contact</p>
+          <h2 class="section-title">Let’s build with data</h2>
+          <p class="section-subtitle">
+            Open to internships, research collaborations, and projects where
+            data science and AI can move the needle for real users.
+          </p>
+        </header>
+
+        <div class="contact-grid">
+          <aside class="contact-info reveal">
+            <article class="contact-card">
+              <div class="contact-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <h3>Email</h3>
+                <p>Best way to reach out for collaborations and roles.</p>
+                <div class="contact-links">
+                  <a href="mailto:eshan@example.com">eshan@example.com</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="contact-card">
+              <div class="contact-icon">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+              <div>
+                <h3>LinkedIn</h3>
+                <p>Connect for opportunities, research, and open‑source work.</p>
+                <div class="contact-links">
+                  <a
+                    href="https://www.linkedin.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="social-link"
+                  >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="social-link"
+                  >
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </aside>
+
+          <div class="contact-form-wrapper reveal">
+            <form
+              id="contactForm"
+              class="contact-form"
+              action="https://formspree.io/f/your-id"
+              method="POST"
+            >
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input id="name" name="name" type="text" required />
+                </div>
+                <div class="form-group">
+                  <label for="emailInput">Email</label>
+                  <input
+                    id="emailInput"
+                    name="email"
+                    type="email"
+                    required
+                  />
+                </div>
+              </div>
+
               <div class="form-group">
                 <label for="type">Project type</label>
                 <select id="type" name="type" required>
                   <option value="">Select an option</option>
-                  <option value="internship">Internship Role</option>
-                  <option value="project">Project Collaboration</option>
-                  <option value="consulting">Consulting</option>
+                  <option value="internship">Internship opportunity</option>
+                  <option value="project">Project collaboration</option>
+                  <option value="research">Research / publication</option>
                   <option value="other">Other</option>
                 </select>
               </div>
-            </div>
 
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                placeholder="Share a brief about your problem, timeline, and data."
-                required
-              ></textarea>
-            </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
 
-            <button type="submit" class="btn btn-primary btn-submit">
-              <i class="fa-solid fa-paper-plane"></i>
-              Send Message
-            </button>
-            <p id="formStatus" class="form-status" aria-live="polite"></p>
-          </form>
+              <button class="btn btn-primary btn-submit" type="submit">
+                <i class="fa-solid fa-paper-plane"></i>
+                Send message
+              </button>
+              <p id="formStatus" class="form-status"></p>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>© 2026 Eshan Singh. All rights reserved.</p>
-      <p class="footer-note">
-        Built with curiosity, clean code, and a love for well‑tuned models.
-      </p>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span>&copy; 2025 Eshan Singh. All rights reserved.</span>
+        <p class="footer-note">
+          Built as a lean, production‑style portfolio with a focus on clear
+          storytelling, measurable impact, and interactive data‑driven details.
+        </p>
+      </div>
+    </footer>
 
-  <script src="main.js"></script>
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
